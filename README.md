@@ -1,1 +1,2 @@
-# banker_sistem
+Sistema  desenvolvido em Python de apenas um usuário,que simula um sistema bancario que realiza depositos, tira extrato e saques. O sistema é protegido para que o usuario não faça depositos em valores negativos, não realize saques com valores negativos também além disso, a função saque contem um mecanismo de proteção que permite que usuario faça no máximo três saques no valor de R$ 500 apois isso o sistema não permite mais saques, alem também que o usuario não poderá realizar saques com saldo inferior ao valor solicitado. A função extrato registra cada movimentação da conta, como saques e despositos e seus respctivos valores.
+Essa é a versão 1.0 que permite apenas um usuário.
