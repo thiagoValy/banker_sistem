@@ -6,6 +6,8 @@ valor = 0
 extrato =[]
 
 
+
+
 print(f"===" * 10)
 print("Bem vindo ao Banco Melanin")
 print(f"===" * 10)
