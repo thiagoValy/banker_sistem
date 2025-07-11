@@ -1,49 +1,45 @@
-Sistema Bancário — Versão 1.0
+📄 Documentação do Sistema Bancário – Versão 2.0
+📌 Visão Geral
+Esta é a versão 2.0 do Sistema Bancário desenvolvido em Python. A nova versão mantém todas as funcionalidades da versão 1.0 e adiciona recursos essenciais de gerenciamento de usuários e contas bancárias.
 
-Este projeto simula um caixa eletrônico simples para apenas um usuário, desenvolvido em Python. O sistema permite realizar depósitos, saques e consultar o extrato, com regras de segurança e controle para garantir uma operação segura e realista.
+✅ Funcionalidades Existentes (Versão 1.0)
+Depósito em conta
 
-Funcionalidades
-Depósito ilimitado, mas não permite valores negativos ou zero.
+Saque com limite diário e por valor
 
-Saque com restrições:
+Histórico de transações (extrato)
 
-Máximo de 3 saques por execução do sistema.
+Validação de saldo antes do saque
 
-Cada saque deve ser de até R$ 500,00.
+🚀 Novas Funcionalidades (Versão 2.0)
+👤 1. Cadastro de Usuário
+Cada usuário é identificado por:
 
-Não permite saques com valores negativos.
+CPF (único)
 
-Não permite saques com saldo insuficiente.
+Nome completo
 
-Extrato detalhado:
+Data de nascimento
 
-Registra todas as movimentações, incluindo depósitos e saques, com os respectivos valores.
+Endereço completo (logradouro, número, bairro, cidade e estado)
 
-Mostra o saldo atual após cada operação.
+🏦 2. Criação de Conta Bancária
+Associada a um usuário existente
 
- Regras do Sistema
-Depósitos:
+Número da conta gerado automaticamente
 
-Valor deve ser positivo.
+Agência padrão: 0001
 
-Número de depósitos é ilimitado.
+Um usuário pode ter mais de uma conta
 
-Saques:
+📋 3. Listagem de Contas Abertas
+Exibe todas as contas registradas no sistema
 
-Permitido realizar até 3 saques no total.
+Mostra:
 
-Cada saque não pode exceder R$ 500,00.
+Agência
 
-Não permite saques com saldo insuficiente.
+Número da conta
 
-Não aceita valores negativos ou zero.
+Nome do titular
 
-Extrato:
-
-Mostra todos os depósitos e saques realizados, além do saldo final.
- Observações
-Esta é a versão 1.0, que permite apenas um único usuário.
-
-O sistema não possui autenticação e não trabalha com múltiplas contas.
-
-Foco do projeto: Praticar lógica de programação, controle de fluxo, validações e manipulação de listas em Python.
