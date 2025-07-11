@@ -1,21 +1,40 @@
 from menu import *
-deposito = 0
+from funcao import *
+
 saldo = 0
-cont  = 0
-cont1 = 0
-valor = 0
-extrato =[]
+deposito = 0
+numero_saques = 0
+limite = 500
+LIMITE_SAQUES = 3
+usuarios = []
+contas = []
+extrato = []
 
 while True:
-    reposta = menu(["ESTRATO", "DEPÓSITO", "SAQUE", "SAIR"])
+    resposta = menu(["ExTRATO", "DEPÓSITO", "SAQUE", "CRIAR USUARIO", "CRIAR CONTA", "LISTAR CONTAS", "SAIR"])
 
-    if reposta == 1:
-        print("extrato")
-    elif reposta == 2:
-        print("deposito")
-    elif reposta == 3:
-        print("saque")
-    elif reposta == 4:
+    if resposta == 1:
+        exibir_extrato(saldo, extrato=extrato)
+
+    elif resposta == 2:
+        valor = float(input("Digite o valor a ser depositado: R$ "))
+        saldo, extrato = depositar(saldo, valor, extrato)
+
+    elif resposta == 3:
+        valor = float(input("Qual o valor do saque: R$ "))
+        saque(saldo=saldo, valor=valor,extrato=extrato, limite=limite, numero_saques=numero_saques, limite_saques=LIMITE_SAQUES,)
+    elif resposta == 4:
+        criar_usuario(usuarios)
+    
+    elif resposta == 5 :
+        numero_conta = len(contas) + 1
+        conta = criar_conta(AGENCIA, numero_conta, usuarios)
+
+        if conta:
+            contas.append(conta)
+            
+    
+    elif resposta == 7:
         print("Sair do sistema")
         break
     else:
