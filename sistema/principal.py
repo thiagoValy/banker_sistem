@@ -9,6 +9,7 @@ LIMITE_SAQUES = 3
 usuarios = []
 contas = []
 extrato = []
+AGENCIA = "0001"
 
 while True:
     resposta = menu(["ExTRATO", "DEPÓSITO", "SAQUE", "CRIAR USUARIO", "CRIAR CONTA", "LISTAR CONTAS", "SAIR"])
@@ -32,6 +33,9 @@ while True:
 
         if conta:
             contas.append(conta)
+            
+    elif resposta == 6:
+        listar_contas(contas)
             
     
     elif resposta == 7:

@@ -63,3 +63,21 @@ def criar_usuario(usuarios):
 
 def criar_conta(agencia, numero_conta, usuarios):
     cpf = input("informe o CPF do usuário: ")
+    usuario = filtrar_usuario(cpf, usuarios)
+    
+    if usuario:
+        print("Conta Criada com Sucesso!!!")
+        return {"agencia": agencia, "numero_conta": numero_conta, "usuario": usuario}
+    print("Usuário não encontrado, criação de conta encerrado")
+
+def listar_contas(contas):
+    for conta in contas:
+        linha = f"""\ 
+        Agencia: {conta['agencia']}
+        C/C: {conta['numero_conta']}
+        Titular: {conta['usuario']['nome']}
+    """
+        
+        print("=" * 42)
+        print(linha)
+    
